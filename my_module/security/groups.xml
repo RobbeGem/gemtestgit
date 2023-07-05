@@ -1,0 +1,6 @@
+<odoo>
+    <record id="groups_my_module" model="res.groups">
+        <field name="name">Technical / Acess to my my module</field>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <!-- Wizard View -->
+        <record model="ir.ui.view" id="my_wizard_view_form">
+            <field name="name">my_wizard.view.form</field>
+            <field name="model">my.wizard</field>
+            <field name="arch" type="xml">
+                <form string="My Wizard">
+                    <group>
+                        <field name="my_field"/>
+                    </group>
+                    <footer>
+                        <button string="Confirm" type="object" name="confirm_action" class="btn-primary"/>
+                        <button string="Cancel" type="object" name="cancel_action" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="my_wizard_action">
+            <field name="name">My Wizard</field>
+            <field name="res_model">my.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem name="My Wizard" id="my_wizard_menu" action="my_wizard_action"/>
+    </data>
+</odoo>
