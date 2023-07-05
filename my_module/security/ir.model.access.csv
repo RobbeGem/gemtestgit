@@ -1,0 +1,4 @@
+id, name, model_id:id, group_id:id, perm_read, perm_write, perm_create, perm_unlink
+acl_my_model_users , my.model default, model_my_model, , 1, 0, 0, 0
+acl_my_model_admin , my.model admin, model_my_model, groups_my_module, 1, 1, 1, 1
+acl_my_model_wizard_users, my.wizard default, model_my_wizard, , 1, 0, 0, 0

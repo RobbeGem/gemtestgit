@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="res_partner_form_view_inherited">
+            <field name="name">res.partner.form.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='function']" position="after">
+                    <field name="my_field"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="res_partner_tree_view_inherited">
+            <field name="name">res.partner.tree.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="my_field"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Kanban View -->
+        <record model="ir.ui.view" id="res_partner_kanban_view_inherited">
+            <field name="name">res.partner.kanban.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_kanban_record_content']" position="inside">
+                    <field name="my_field"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="res_partner_search_view_inherited">
+            <field name="name">res.partner.search.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='contact']" position="after">
+                    <filter string="My Field" name="my_field" domain="[]" context="{'group_by': False}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

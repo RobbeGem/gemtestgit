@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="my_model_form_view">
+            <field name="name">my_model.form.view</field>
+            <field name="model">my_module.my_model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="my_field"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="my_model_tree_view">
+            <field name="name">my_model.tree.view</field>
+            <field name="model">my_module.my_model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="my_field"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Kanban View -->
+        <record model="ir.ui.view" id="my_model_kanban_view">
+            <field name="name">my_model.kanban.view</field>
+            <field name="model">my_module.my_model</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="my_field"/>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="my_model_search_view">
+            <field name="name">my_model.search.view</field>
+            <field name="model">my_module.my_model</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="my_field"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="my_model_action">
+            <field name="name">My Model</field>
+            <field name="res_model">my_module.my_model</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem name="My Model" id="my_model_menu" action="my_model_action"/>
+    </data>
+</odoo>
