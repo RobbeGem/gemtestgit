@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "my module",
+    'name': "the module",
     'description': """
         my description
     """,
