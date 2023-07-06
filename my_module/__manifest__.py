@@ -2,7 +2,7 @@
 {
     'name': "the module",
     'description': """
-        my description
+        the description
     """,
     'summary': "",
 	'author':"Gembaware",
