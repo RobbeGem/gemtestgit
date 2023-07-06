@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "the module",
+    'name': "my module",
     'description': """
-        the description
+        my description
     """,
     'summary': "",
 	'author':"Gembaware",
